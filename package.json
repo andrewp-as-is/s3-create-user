@@ -1,0 +1,14 @@
+{
+  "name": "s3-create-user",
+  "version": "2019.4.13",
+  "description": "create user and policy for S3 bucket",
+  "keywords": [
+    "S3"
+  ],
+  "homepage": "https://github.com/andrewp-as-is/s3-create-user",
+  "license": "Unlicense",
+  "bin": {
+    "s3-create-full-access-user": "./scripts/s3-create-full-access-user",
+    "s3-create-read-only-user": "./scripts/s3-create-read-only-user"
+  }
+}
