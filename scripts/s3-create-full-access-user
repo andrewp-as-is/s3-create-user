@@ -3,14 +3,16 @@
 
 usage() {
     echo "usage: $(basename $0) bucket [username]"
-    [[ $1 == "-h" ]] || [[ $1 == "--help" ]]; exit
+    [ "$1" = "-h" ] || [ "$1" = "--help" ]; exit
 }
 
-[[ $1 == "-h" ]] || [[ $1 == "--help" ]] && usage "$@"
+[ "$1" = "-h" ] || [ "$1" = "--help" ] && usage "$@"
 
 [[ $# == 0 ]] || [[ $# -gt 2 ]] && usage
 
 [[ -z $2 ]] && set -- "$1" S3-"$1"-FullAccess
+[[ -z "$1" ]] && echo "ERROR: bucket name is empty" 1>&2 && exit 1
+[[ -z "$2" ]] && echo "ERROR: user name is empty" 1>&2 && exit 1
 
 BUCKET_NAME="$1"
 USER_NAME="$2"
