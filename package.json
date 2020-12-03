@@ -1,6 +1,6 @@
 {
   "name": "s3-create-user",
-  "version": "2019.4.13",
+  "version": "2020.12.3",
   "description": "create user and policy for S3 bucket",
   "keywords": [
     "S3"
